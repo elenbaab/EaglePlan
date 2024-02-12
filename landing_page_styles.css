@@ -48,3 +48,17 @@ body {
     border: 1px solid black;
     margin: 0;
 }
+
+.courses-container {
+    margin: auto;
+    width: 50%;
+    top: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.grid-cell {
+    border: 1px solid #ddd; 
+    text-align: center; /* Center the text inside cells */
+    padding: 10px; /* Add some padding for better visual appearance */
+}
