@@ -25,40 +25,55 @@ body {
 }
 
 #core-requirements-container {
-    border:4px solid #BC9B6A;
+    border: 4px solid #BC9B6A;
     position: absolute;
     top: 30%;
     left: .5%;
     transform: translate(0, -50%);
+    margin-top: 10px;
 }
 
 #core-requirements-container, #core-requirements-text {
     color: #98002E;
-    font-size: 10px;
+    font-size: 1em;
 }
 
 #core-requirements-container, #core-requirements-text, #core-requirements-dropdown, #core-requirements-text h2
 {
-   display: inline;
+    display: inline;
 }
 
-.empty-box {
-    width: 202px;
-    height: 20px;
-    border: 1px solid black;
-    margin: 0;
-}
-
-.courses-container {
-    margin: auto;
-    width: 50%;
-    top: 50%;
-    border: 3px solid green;
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 125px 125px 125px 125px;
+    justify-content: space-evenly;
+    gap: 10px;
+    background-color: maroon;
     padding: 10px;
+    margin-left: 600px;
+    margin-right: 300px;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
 
-.grid-cell {
-    border: 1px solid #ddd; 
-    text-align: center; /* Center the text inside cells */
-    padding: 10px; /* Add some padding for better visual appearance */
+.grid-container > div {
+    background-color: gold;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
 }
+
+.grid-container > div .semester-title {
+    font-size: 20px;
+}
+
+.grid-container > div .empty-box {
+    justify-content: center;
+    width: 225px;
+    height: 12px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+
