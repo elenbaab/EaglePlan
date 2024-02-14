@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
+/*----------------------------------------*/
 #top-bar {
     background-color: #98002E;
     padding: 15px;
@@ -23,55 +23,85 @@ body {
     font-size: 20px;
     margin-right: 10px;
 }
-
-#core-requirements-container {
-    border: 4px solid #BC9B6A;
-    position: absolute;
-    top: 30%;
-    left: .5%;
-    transform: translate(0, -50%);
-    margin-top: 10px;
-}
-
-#core-requirements-container, #core-requirements-text {
-    color: #98002E;
-    font-size: 1em;
-}
-
-#core-requirements-container, #core-requirements-text, #core-requirements-dropdown, #core-requirements-text h2
-{
-    display: inline;
-}
-
-.grid-container {
+/*----------------------------------------*/
+.core-requirements-container {
     display: grid;
-    grid-template-columns: 300px 300px;
+    width: 100%;
+    height: 350px;
+    grid-template-areas:
+    "a b"
+    "c c";
+    grid-template-rows: 40px 200px;
+    grid-template-columns: 165px 95px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.core-requirements-container .core-requirements-text {
+    grid-area: a;
+    background-color: #BC9B6A;
+}
+
+.core-requirements-container .core-requirements-text h2{
+    color: #98002E;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.core-requirements-container .core-requirements-dropdown {
+    grid-area: b;
+    background-color: #BC9B6A;
+}
+
+.core-requirements-container .core-requirements-dropdown .form-control{
+    margin-top: 2px;
+    background-color: #BC9B6A;
+    color: #98002E;
+    font-size: 16px;
+}
+
+.core-requirements-container .core-requirements-classes {
+    grid-area: c;
+    background-color: white;
+}
+
+.core-requirements-container .core-requirements-classes .empty-box {
+    width: 260px;
+    height: 20px;
+    border: 2px solid #98002E;
+    margin: 0;
+}
+/*----------------------------------------*/
+.grid-container {
+    position: absolute;
+    top: 100px;
+    right: 400px;
+    margin-left: 500px;
+    display: grid;
+    grid-template-columns: 275px 275px;
     grid-template-rows: 125px 125px 125px 125px;
     justify-content: space-evenly;
     gap: 10px;
     background-color: maroon;
     padding: 10px;
-    margin-left: 600px;
-    margin-right: 300px;
-    margin-top: 75px;
-    margin-bottom: 75px;
 }
 
-.grid-container > div {
-    background-color: gold;
+.grid-container .semester {
+    background-color: white;
     border: 2px solid black;
     text-align: center;
     font-size: 30px;
 }
 
-.grid-container > div .semester-title {
+.grid-container .semester .semester-title {
     font-size: 20px;
 }
 
-.grid-container > div .empty-box {
+.grid-container .semester .empty-box {
     justify-content: center;
-    width: 225px;
-    height: 12px;
+    width: 250px;
+    height: 17px;
     border: 1px solid black;
     margin: 0 auto;
 }
